@@ -58,6 +58,11 @@ class Measurement
         return $this->celsius;
     }
 
+    public function getFahrenheit(): ?string
+    {
+        return ($this->getCelsius() * 9/5) + 32;
+    }
+
     public function setCelsius(string $celsius): static
     {
         $this->celsius = $celsius;
